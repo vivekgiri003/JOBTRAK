@@ -6328,10 +6328,10 @@ const App = () => {
 ```js
 import { useRouteError } from "react-router-dom";
 
-const Error = () => {
+const ErrorElement = () => {
   const error = useRouteError();
   console.log(error);
-  return <h4>There was an error...</h4>;
+  return <h4>some error detected...</h4>;
 };
 export default ErrorElement;
 ```
@@ -6439,7 +6439,7 @@ const Stats = () => {
   if (isLoading) return <h4>Loading...</h4>;
   if (isError) return <h4>Error...</h4>;
   // after loading/error or ?.
-  const { defaultStats, monthlyApplications } = data;
+  const { defaultStats, monthlyApplications } = data.data;
 
   return (
     <>
